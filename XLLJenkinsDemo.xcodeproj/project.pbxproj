@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -68,19 +68,35 @@
 		A9717A9E244DA34F00FF08C8 /* XLLJenkinsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A97679AB2477AAD6002109FC /* SupportingFiles */,
+				A97679AA2477AAC7002109FC /* AppDelegate */,
+				A9717AA5244DA34F00FF08C8 /* ViewController.h */,
+				A9717AA6244DA34F00FF08C8 /* ViewController.m */,
+			);
+			path = XLLJenkinsDemo;
+			sourceTree = "<group>";
+		};
+		A97679AA2477AAC7002109FC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
 				A9717A9F244DA34F00FF08C8 /* AppDelegate.h */,
 				A9717AA0244DA34F00FF08C8 /* AppDelegate.m */,
 				A9717AA2244DA34F00FF08C8 /* SceneDelegate.h */,
 				A9717AA3244DA34F00FF08C8 /* SceneDelegate.m */,
-				A9717AA5244DA34F00FF08C8 /* ViewController.h */,
-				A9717AA6244DA34F00FF08C8 /* ViewController.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A97679AB2477AAD6002109FC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				A9717AA8244DA34F00FF08C8 /* Main.storyboard */,
 				A9717AAB244DA35000FF08C8 /* Assets.xcassets */,
 				A9717AAD244DA35000FF08C8 /* LaunchScreen.storyboard */,
 				A9717AB0244DA35000FF08C8 /* Info.plist */,
 				A9717AB1244DA35000FF08C8 /* main.m */,
 			);
-			path = XLLJenkinsDemo;
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		E80471F43743DC4BC003D0F5 /* Pods */ = {
@@ -89,7 +105,6 @@
 				02660DED994ACC684BA03040 /* Pods-XLLJenkinsDemo.debug.xcconfig */,
 				6F16D5FC97C465EE78C1F787 /* Pods-XLLJenkinsDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
