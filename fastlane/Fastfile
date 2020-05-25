@@ -20,9 +20,29 @@ INFO_PLIST_FILE_PATH = './XLLJenkinsDemo/Info.plist'
 
 platform :ios do
   desc "自动化打AdHoc包"
-  lane :AdHoc do |options|
+  lane :adHoc do |options|
     gym(
-      Scheme: ""
+      scheme: "XLLJenkinsDemo",
+      export_method: options[:export_method],
+      output_name: options[:output_name],
+      output_directory: options[:output_directory],
+      export_options: {
+        compileBitcode: false,
+        provisioningProfiles: {
+          "com.melot.XLLJenkinsDemo" => "xxx"
+        }
+      },
+      xcargs: '-allowProvisioningUpdates',
+      clean: true,
+      silent: true
     )
+    uploadToPgyer
   end
+end
+
+desc "Upload ipa to agyer"
+lane :uploadToPgyer do
+  pg_app_key = "403a53481552187f105636dc888f69f7"
+  pg_user_key = "e3ab1abc7188421e8234258fb4240a7e"
+  pgyer(api_key: "#{pg_app_key}", user_key: "#{pg_user_key}",password: "123456", install_type: "2")
 end
